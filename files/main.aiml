@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+
+  <!-- Greeting response -->
+  <category>
+    <pattern>HELLO</pattern>
+    <template>
+      Hi! I’m your career advisor chatbot.
+      Tell me what you enjoy most: coding, security, data, systems, or testing.
+    </template>
+  </category>
+
+  <!-- Redirect common greetings -->
+  <category>
+    <pattern>HI</pattern>
+    <template><srai>HELLO</srai></template>
+  </category>
+
+  <category>
+    <pattern>HEY</pattern>
+    <template><srai>HELLO</srai></template>
+  </category>
+
+  <!-- Route user interest keywords to careers -->
+  <category>
+    <pattern>*CODING*</pattern>
+    <template><srai>SOFTWARE DEVELOPER</srai></template>
+  </category>
+
+  <category>
+    <pattern>*SECURITY*</pattern>
+    <template><srai>CYBERSECURITY ANALYST</srai></template>
+  </category>
+
+  <category>
+    <pattern>*DATA*</pattern>
+    <template><srai>DATA ANALYST</srai></template>
+  </category>
+
+  <category>
+    <pattern>*SYSTEM*</pattern>
+    <template><srai>SYSTEMS ENGINEER</srai></template>
+  </category>
+
+  <category>
+    <pattern>*TEST*</pattern>
+    <template><srai>QA ANALYST</srai></template>
+  </category>
+
+  <!-- Career: Software Developer -->
+  <category>
+    <pattern>SOFTWARE DEVELOPER</pattern>
+    <template>
+      A Software Developer designs and builds applications.
+      This role is a great fit if you enjoy programming and solving problems.
+    </template>
+  </category>
+
+  <!-- Career: Cybersecurity Analyst -->
+  <category>
+    <pattern>CYBERSECURITY ANALYST</pattern>
+    <template>
+      A Cybersecurity Analyst protects systems from threats and vulnerabilities.
+      This is ideal if you enjoy security and risk prevention.
+    </template>
+  </category>
+
+  <!-- Career: Data Analyst -->
+  <category>
+    <pattern>DATA ANALYST</pattern>
+    <template>
+      A Data Analyst works with data to find patterns and insights.
+      This role is a strong fit if you enjoy analysis and working with numbers.
+    </template>
+  </category>
+
+  <!-- Career: Systems Engineer -->
+  <category>
+    <pattern>SYSTEMS ENGINEER</pattern>
+    <template>
+      A Systems Engineer manages and maintains infrastructure and networks.
+      This role fits someone who enjoys troubleshooting and system support.
+    </template>
+  </category>
+
+  <!-- Career: QA Analyst -->
+  <category>
+    <pattern>QA ANALYST</pattern>
+    <template>
+      A QA Analyst tests software to ensure quality before release.
+      This role is ideal if you are detail-oriented and enjoy finding issues.
+    </template>
+  </category>
+
+  <!-- Fallback if no match -->
+  <category>
+    <pattern>*</pattern>
+    <template>
+      I can help you choose between Software Developer, Cybersecurity Analyst,
+      Data Analyst, Systems Engineer, or QA Analyst.
+      Which area interests you most?
+    </template>
+  </category>
+
+</aiml>
