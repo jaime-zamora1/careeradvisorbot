@@ -21,29 +21,67 @@
     <template><srai>HELLO</srai></template>
   </category>
 
-  <!-- Route user interest keywords to careers -->
+  <!-- Route user interest keywords to careers (exact word + in-sentence match) -->
+
+  <!-- CODING -->
   <category>
-    <pattern>*CODING*</pattern>
+    <pattern>CODING</pattern>
+    <template><srai>SOFTWARE DEVELOPER</srai></template>
+  </category>
+  <category>
+    <pattern>* CODING *</pattern>
     <template><srai>SOFTWARE DEVELOPER</srai></template>
   </category>
 
+  <!-- SECURITY -->
   <category>
-    <pattern>*SECURITY*</pattern>
+    <pattern>SECURITY</pattern>
+    <template><srai>CYBERSECURITY ANALYST</srai></template>
+  </category>
+  <category>
+    <pattern>* SECURITY *</pattern>
     <template><srai>CYBERSECURITY ANALYST</srai></template>
   </category>
 
+  <!-- DATA -->
   <category>
-    <pattern>*DATA*</pattern>
+    <pattern>DATA</pattern>
+    <template><srai>DATA ANALYST</srai></template>
+  </category>
+  <category>
+    <pattern>* DATA *</pattern>
     <template><srai>DATA ANALYST</srai></template>
   </category>
 
+  <!-- SYSTEMS -->
   <category>
-    <pattern>*SYSTEM*</pattern>
+    <pattern>SYSTEMS</pattern>
+    <template><srai>SYSTEMS ENGINEER</srai></template>
+  </category>
+  <category>
+    <pattern>* SYSTEMS *</pattern>
+    <template><srai>SYSTEMS ENGINEER</srai></template>
+  </category>
+  <category>
+    <pattern>* SYSTEM *</pattern>
     <template><srai>SYSTEMS ENGINEER</srai></template>
   </category>
 
+  <!-- TESTING -->
   <category>
-    <pattern>*TEST*</pattern>
+    <pattern>TESTING</pattern>
+    <template><srai>QA ANALYST</srai></template>
+  </category>
+  <category>
+    <pattern>TEST</pattern>
+    <template><srai>QA ANALYST</srai></template>
+  </category>
+  <category>
+    <pattern>* TESTING *</pattern>
+    <template><srai>QA ANALYST</srai></template>
+  </category>
+  <category>
+    <pattern>* TEST *</pattern>
     <template><srai>QA ANALYST</srai></template>
   </category>
 
@@ -92,7 +130,7 @@
     </template>
   </category>
 
-  <!-- Fallback if no match -->
+  <!-- Fallback (keep this LAST) -->
   <category>
     <pattern>*</pattern>
     <template>
