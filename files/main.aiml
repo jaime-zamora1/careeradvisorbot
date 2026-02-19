@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml version="2.0">
 
-  <!-- Greeting response -->
+  <!-- Greeting -->
   <category>
     <pattern>HELLO</pattern>
     <template>
@@ -21,53 +21,86 @@
     <template><srai>HELLO</srai></template>
   </category>
 
-  <!-- Route user interest keywords to careers (exact word + in-sentence match) -->
+  <!-- Help / menu -->
+  <category>
+    <pattern>HELP</pattern>
+    <template>
+      I can recommend: Software Developer, Cybersecurity Analyst, Data Analyst, Systems Engineer, or QA Analyst.
+      Type one of these interests: coding, security, data, systems, or testing.
+    </template>
+  </category>
 
-  <!-- CODING -->
+  <category>
+    <pattern>CAREERS</pattern>
+    <template><srai>HELP</srai></template>
+  </category>
+
+  <category>
+    <pattern>WHAT CAN YOU DO</pattern>
+    <template><srai>HELP</srai></template>
+  </category>
+
+  <!-- ========================= -->
+  <!-- ROUTING (no wildcards)     -->
+  <!-- ========================= -->
+
+  <!-- CODING -> Software Developer -->
   <category>
     <pattern>CODING</pattern>
     <template><srai>SOFTWARE DEVELOPER</srai></template>
   </category>
   <category>
-    <pattern>* CODING *</pattern>
+    <pattern>I LIKE CODING</pattern>
+    <template><srai>SOFTWARE DEVELOPER</srai></template>
+  </category>
+  <category>
+    <pattern>I ENJOY CODING</pattern>
     <template><srai>SOFTWARE DEVELOPER</srai></template>
   </category>
 
-  <!-- SECURITY -->
+  <!-- SECURITY -> Cybersecurity Analyst -->
   <category>
     <pattern>SECURITY</pattern>
     <template><srai>CYBERSECURITY ANALYST</srai></template>
   </category>
   <category>
-    <pattern>* SECURITY *</pattern>
+    <pattern>I LIKE SECURITY</pattern>
+    <template><srai>CYBERSECURITY ANALYST</srai></template>
+  </category>
+  <category>
+    <pattern>I ENJOY SECURITY</pattern>
     <template><srai>CYBERSECURITY ANALYST</srai></template>
   </category>
 
-  <!-- DATA -->
+  <!-- DATA -> Data Analyst -->
   <category>
     <pattern>DATA</pattern>
     <template><srai>DATA ANALYST</srai></template>
   </category>
   <category>
-    <pattern>* DATA *</pattern>
+    <pattern>I LIKE DATA</pattern>
+    <template><srai>DATA ANALYST</srai></template>
+  </category>
+  <category>
+    <pattern>I ENJOY DATA</pattern>
     <template><srai>DATA ANALYST</srai></template>
   </category>
 
-  <!-- SYSTEMS -->
+  <!-- SYSTEMS -> Systems Engineer -->
   <category>
     <pattern>SYSTEMS</pattern>
     <template><srai>SYSTEMS ENGINEER</srai></template>
   </category>
   <category>
-    <pattern>* SYSTEMS *</pattern>
+    <pattern>I LIKE SYSTEMS</pattern>
     <template><srai>SYSTEMS ENGINEER</srai></template>
   </category>
   <category>
-    <pattern>* SYSTEM *</pattern>
+    <pattern>I ENJOY SYSTEMS</pattern>
     <template><srai>SYSTEMS ENGINEER</srai></template>
   </category>
 
-  <!-- TESTING -->
+  <!-- TESTING -> QA Analyst -->
   <category>
     <pattern>TESTING</pattern>
     <template><srai>QA ANALYST</srai></template>
@@ -77,66 +110,77 @@
     <template><srai>QA ANALYST</srai></template>
   </category>
   <category>
-    <pattern>* TESTING *</pattern>
+    <pattern>I LIKE TESTING</pattern>
     <template><srai>QA ANALYST</srai></template>
   </category>
   <category>
-    <pattern>* TEST *</pattern>
+    <pattern>I ENJOY TESTING</pattern>
     <template><srai>QA ANALYST</srai></template>
   </category>
 
-  <!-- Career: Software Developer -->
+  <!-- ========================= -->
+  <!-- CAREER RESPONSES           -->
+  <!-- ========================= -->
+
+  <!-- Software Developer -->
   <category>
     <pattern>SOFTWARE DEVELOPER</pattern>
     <template>
-      A Software Developer designs and builds applications.
-      This role is a great fit if you enjoy programming and solving problems.
+      You may be a good fit for a <b>Software Developer</b>.
+      You would design and build applications, fix bugs, and create new features.
+      This role is a great match if you enjoy programming and problem-solving.
     </template>
   </category>
 
-  <!-- Career: Cybersecurity Analyst -->
+  <!-- Cybersecurity Analyst -->
   <category>
     <pattern>CYBERSECURITY ANALYST</pattern>
     <template>
-      A Cybersecurity Analyst protects systems from threats and vulnerabilities.
-      This is ideal if you enjoy security and risk prevention.
+      You may be a good fit for a <b>Cybersecurity Analyst</b>.
+      You would help protect systems from threats, monitor security risks, and respond to incidents.
+      This role fits well if you like security and preventing attacks.
     </template>
   </category>
 
-  <!-- Career: Data Analyst -->
+  <!-- Data Analyst -->
   <category>
     <pattern>DATA ANALYST</pattern>
     <template>
-      A Data Analyst works with data to find patterns and insights.
-      This role is a strong fit if you enjoy analysis and working with numbers.
+      You may be a good fit for a <b>Data Analyst</b>.
+      You would work with data, find patterns, and create reports to support decisions.
+      This role is a strong match if you enjoy analysis and working with numbers.
     </template>
   </category>
 
-  <!-- Career: Systems Engineer -->
+  <!-- Systems Engineer -->
   <category>
     <pattern>SYSTEMS ENGINEER</pattern>
     <template>
-      A Systems Engineer manages and maintains infrastructure and networks.
-      This role fits someone who enjoys troubleshooting and system support.
+      You may be a good fit for a <b>Systems Engineer</b>.
+      You would maintain infrastructure (servers, networks, or cloud systems) and troubleshoot issues.
+      This role fits someone who enjoys hands-on support and keeping systems running.
     </template>
   </category>
 
-  <!-- Career: QA Analyst -->
+  <!-- QA Analyst -->
   <category>
     <pattern>QA ANALYST</pattern>
     <template>
-      A QA Analyst tests software to ensure quality before release.
-      This role is ideal if you are detail-oriented and enjoy finding issues.
+      You may be a good fit for a <b>QA Analyst (Software Tester)</b>.
+      You would test software, find defects, and help ensure releases meet quality standards.
+      This role is ideal if you are detail-oriented and like finding issues before customers do.
     </template>
   </category>
 
-  <!-- Fallback (keep this LAST) -->
+  <!-- ========================= -->
+  <!-- FALLBACK (keep LAST)       -->
+  <!-- ========================= -->
+
   <category>
     <pattern>*</pattern>
     <template>
-      I can help you choose between Software Developer, Cybersecurity Analyst,
-      Data Analyst, Systems Engineer, or QA Analyst.
-      Which area interests you most?
+      I can help you choose between Software Developer, Cybersecurity Analyst, Data Analyst, Systems Engineer, or QA Analyst.
+      Tell me what you enjoy most: coding, security, data, systems, or testing.
     </template>
   </category>
 
